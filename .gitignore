@@ -4,6 +4,8 @@ lerna-debug.log
 /packages/action-decorator/package-lock.json
 */.idea
 */.umi
+/es
+/dist
 .umi
 /.history/
 /.idea/

@@ -15,6 +15,7 @@
       "es2017"
     ],
     "skipLibCheck": true,
+    "outDir": "es",
     "declarationDir": "types",
     "strict": true,
     "declaration": true,

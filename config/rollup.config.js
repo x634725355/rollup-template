@@ -1,6 +1,6 @@
-const { nodeResolve } = require("@rollup/plugin-node-resolve");
+const { nodeResolve } = require("@rollup/plugin-node-resolve"); // 必写!! 让rollup能够定位node_modules里面的依赖
 const { babel } = require('@rollup/plugin-babel');
-const commonjs = require("@rollup/plugin-commonjs");
+const commonjs = require("@rollup/plugin-commonjs"); // 必写!! 让rollup能够解析commonjs格式的包
 const typescript = require('rollup-plugin-typescript2');
 const { imageHandle } = require('rollup-plugins-csc-images');
 const postcss = require('rollup-plugin-postcss');

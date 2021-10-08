@@ -5,6 +5,8 @@ const typescript = require('rollup-plugin-typescript2');
 const { imageHandle } = require('rollup-plugins-csc-images');
 const postcss = require('rollup-plugin-postcss');
 const rollPostcssConfig = require("./postcss.config.js");
+const json = require("@rollup/plugin-json");
+const size = require("rollup-plugin-sizes");
 
 const path = require('path');
 const root = process.cwd();
@@ -15,6 +17,7 @@ const inputOptions = {
   external: ["react", "react-dom", "antd"],
   // 自己的插件
   plugins: [
+    json(),
     nodeResolve(), // 必写!! 让rollup能够定位node_modules里面的依赖
     postcss(rollPostcssConfig),
     commonjs(), // 必写!! 让rollup能够解析commonjs格式的包
@@ -32,7 +35,8 @@ const inputOptions = {
       extensions: ['.js', '.jsx', '.ts', '.tsx']
     }),
     // 处理js,ts中的图片
-    imageHandle()
+    imageHandle(),
+    size()
   ],
 };
 

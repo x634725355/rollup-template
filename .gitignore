@@ -12,3 +12,5 @@ lerna-debug.log
 /**/.idea/
 /**/*.d.ts
 /**/.rpt2_cache/
+
+.DS_Store

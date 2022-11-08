@@ -1,4 +1,3 @@
-import { resolve } from "path";
 
 export class Momo {
   name: string;
@@ -7,7 +6,6 @@ export class Momo {
   constructor() {
     this.name = 'momo';
     this.age = 18;
-    console.log('momo', resolve('./dist/momo.js'));
   }
 
   callMe() {

@@ -2,11 +2,12 @@ const { nodeResolve } = require("@rollup/plugin-node-resolve"); // 必写!! 让r
 const { babel } = require('@rollup/plugin-babel');
 const commonjs = require("@rollup/plugin-commonjs"); // 必写!! 让rollup能够解析commonjs格式的包
 const typescript = require('rollup-plugin-typescript2');
-const { imageHandle } = require('rollup-plugins-csc-images');
+// const { imageHandle } = require('rollup-plugins-csc-images');
 const postcss = require('rollup-plugin-postcss');
 const rollPostcssConfig = require("./postcss.config.js");
 const json = require("@rollup/plugin-json");
 const size = require("rollup-plugin-sizes");
+const image = require("rollup-plugin-img");
 
 const path = require('path');
 const root = process.cwd();
@@ -35,8 +36,12 @@ const inputOptions = {
       extensions: ['.js', '.jsx', '.ts', '.tsx']
     }),
     // 处理js,ts中的图片
-    imageHandle(),
-    size()
+    image({
+      limit: 80000,
+      output: 'dist/images',
+      exclude: 'node_modules/**'
+    }),
+    size(),
   ],
 };
 

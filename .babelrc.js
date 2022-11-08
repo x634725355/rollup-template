@@ -23,13 +23,13 @@ module.exports = function (api) {
       //     babelHelpers: "runtime"
       //   },
       // ],
-      [
-        require.resolve("babel-plugin-import-style"),
-        {
-          libName: "antd",
-          libDir: "lib",
-        },
-      ],
+      // [
+      //   require.resolve("babel-plugin-import-style"),
+      //   {
+      //     libName: "antd",
+      //     libDir: "lib",
+      //   },
+      // ],
     ],
   };
 };

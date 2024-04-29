@@ -1,4 +1,5 @@
 import { resolve } from "path";
+import './index.less'
 
 export class Momo {
   name: string;
